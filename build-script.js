@@ -1,4 +1,5 @@
 import SearchIntegrator from "search-integrator/src/main/search-integrator.js";
+import * as fs from "fs";
 
 const config = {
     inputDirectories: [
@@ -7,7 +8,7 @@ const config = {
         }
     ],
     outputBaseDirectory: "./output",
-    baseUrl: "http://localhost:63342/search-integrator-quickstart-example/output",
+    baseUrl: "http://localhost:3000",
     integratorConfig: {
         htmlComponentIntegrations: [
             {
@@ -25,3 +26,5 @@ const config = {
 
 const searchIntegrator = new SearchIntegrator(config);
 await searchIntegrator.integrateSearch();
+
+fs.copyFileSync("search-component.js", "output/search-component.js");

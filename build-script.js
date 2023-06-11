@@ -7,7 +7,7 @@ const config = {
         }
     ],
     outputBaseDirectory: "./output",
-    baseUrl: "http://localhost:63342/searchIntegratorQuickstart/output",
+    baseUrl: "http://localhost:63342/search-integrator-quickstart-example/output",
     integratorConfig: {
         htmlComponentIntegrations: [
             {
